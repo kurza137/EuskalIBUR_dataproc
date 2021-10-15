@@ -43,7 +43,7 @@ def shortcut(sub, ses, task, tasklist=TASKS): #defining a function, this way I d
 # PPG & Belt
 
 # Get to the right folder
-os.chdir('/bcbl/home/public/PJMASK_2/preproc/rawdata')  # This should work but I can't check since I'm on Unix
+os.chdir('/bcbl/home/public/PJMASK_2/preproc/')  # This should work but I can't check since I'm on Unix
 
 # These are the indexes for subject, session and task
 sub = 1  # up to 10
