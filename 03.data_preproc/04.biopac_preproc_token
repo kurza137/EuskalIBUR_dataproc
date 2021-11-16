@@ -12,9 +12,9 @@ def shortcut(sub, ses, task, tasklist=TASKS): #defining a function, this way I d
     filename = os.path.join('rawdata', f'sub-{sub:03g}', f'ses-{ses:02g}', 'func_phys', f'sub-{sub:03g}_ses-{ses:02g}_task-{tasklist[task]}_physio')
 
     if ses >= 7:
-        ch = 4  # 4 is PPG; 2 is Belt
+        ch = 5  # 4 is PPG; 2 is Belt 5 is CO2
     else:
-        ch = 3  # 3 is PPG; 1 is Belt
+        ch = 4  # 3 is PPG; 1 is Belt 4 is CO2
 
     dist = 0
 
@@ -24,6 +24,9 @@ def shortcut(sub, ses, task, tasklist=TASKS): #defining a function, this way I d
     if ch == 1 or ch == 2:
         dist = 100
         ch_name = 'belt'
+    if ch == 5 or ch == 4:
+        dist = 100
+        ch_name = 'co2'
 
     data_filt = np.genfromtxt(f'{filename}_filt.tsv.gz')
 
