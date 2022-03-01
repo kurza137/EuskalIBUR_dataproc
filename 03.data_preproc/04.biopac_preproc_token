@@ -92,7 +92,7 @@ task = 0  # 0: 'motor', 1: 'simon', 2: 'pinel', 3: 'rest_run-01',
 
 # Copy from here...
 print(f'subject: {sub:03g}; session:{ses:02g}; task:{TASKS[task]}')
-filename = os.path.join(f'sub-{sub:03g}_ses-{ses:02g}_task-{TASKS[task]}_physio')
+filename = os.path.join(f'sub-{sub:03g}', f'ses-{ses:02g}', 'func_phys', f'sub-{sub:03g}_ses-{ses:02g}_task-{TASKS[task]}_physio')
 
 if ses >= 7:
     ch = 5
