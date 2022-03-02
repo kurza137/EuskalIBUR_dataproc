@@ -108,7 +108,7 @@ phys = pk.Physio(data_filt[:, ch], fs=40.0)
 phys = pk.operations.peakfind_physio(phys, thresh=thr, dist=dist)
 
 phys = pk.operations.edit_physio(phys)
-plt.show()
+#plt.show()
 
 # And finally this line (export file)
 path = pk.save_physio(f'{filename}_peaks_ch-co2.phys', phys)
